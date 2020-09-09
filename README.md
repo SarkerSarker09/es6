@@ -12,6 +12,9 @@
  forEach
  shift
  from
+ promise
+ async-await
+ rest and spread operators
 ```
 
 
