@@ -9,6 +9,9 @@
  object
  reduce
  map set
+ forEach
+ shift
+ from
 ```
 
 
