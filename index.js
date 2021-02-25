@@ -10,3 +10,6 @@ console.log(`result2:  ${result2}`);
 //====== way 03====== through Array 
 const result3 = Array.from(str);
 console.log(`result03: ${result3}`)
+
+
+
