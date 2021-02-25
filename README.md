@@ -15,6 +15,10 @@
  promise
  async-await
  rest and spread operators
+ 
+ 
+ string to array conversion
+ 
 ```
 
 
