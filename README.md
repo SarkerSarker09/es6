@@ -17,7 +17,7 @@
  rest and spread operators
  
  
- string to array conversion
+ string to array conversion (rest operator, object.assign, array.from)
  
 ```
 
