@@ -107,7 +107,7 @@ let obj = {
 let res = obj.order_list
   .filter((o) => o.order_status !== "Canceled")
   .reduce((acc, curr) => {
-    return acc + curr.price * curr.qty;
+    return acc = acc + curr.price * curr.qty;
   }, 0);
 
 console.log(`total: ${res}`);
