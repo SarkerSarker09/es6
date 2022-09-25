@@ -12,29 +12,15 @@ console.log('reduce-total=>', total);
 
 
 const nidList = [
-       {
-           sl: 101,
-           nid: 1001
-       },
-       {
-           sl: 102,
-           nid: 1001
-       },
-       {
-           sl: 103,
-           nid: 1002
-       },
-       {
-           sl: 104,
-           nid: 1003
-       },
-       {
-           sl: 105,
-           nid: 1004
-       },
+       { sl: 101,  nid: 1001, point: 100  },
+       { sl: 102,  nid: 1001, point: 150  },
+       { sl: 103,  nid: 1002, point: 120  },
+       { sl: 104,  nid: 1003, point: 110  },
+       { sl: 105,  nid: 1004, point: 140  },
     ];
 
-const uniqueNIDList = nidList.reduce((prev,cur) => {    
+const uniqueNIDList = nidList.reduce((prev,cur) => {  
+    console.log(`prev: ${JSON.stringify(prev)} cur: ${JSON.stringify(cur)}`)
     const isExist = prev.filter(p => +p.nid === +cur.nid);
     if (isExist.length === 0 )  {
         prev.push(cur);
@@ -42,7 +28,10 @@ const uniqueNIDList = nidList.reduce((prev,cur) => {
     return prev;
 }, []);
 
+const totalPoint = nidList.map(o=> o.point).reduce((prev,cur) => { return prev+cur;  });
+
 console.log(`uniqueNIDList: ${JSON.stringify(uniqueNIDList)}`)
+console.log(`totalPoint: ${totalPoint}`)
 
 
 
