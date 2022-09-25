@@ -11,23 +11,38 @@ console.log('reduce-total=>', total);
 
 
 
-const persons = [
-  {id : 101, productId: 12002},
-  {id : 102, productId: 12003},
-  {id : 103, productId: 12002},
-  {id : 101, productId: 12004}
-];
+const nidList = [
+       {
+           sl: 101,
+           nid: 1001
+       },
+       {
+           sl: 102,
+           nid: 1001
+       },
+       {
+           sl: 103,
+           nid: 1002
+       },
+       {
+           sl: 104,
+           nid: 1003
+       },
+       {
+           sl: 105,
+           nid: 1004
+       },
+    ];
 
-// es6 reduce with remove duplicates and find unique items
-const uniqueItems = persons.reduce((prev,cur) => {
-	const isExist = prev.filter(p => p.productId === cur.productId );
-	if (isExist.length === 0) {
-		prev.push(cur);
-	}
-	return prev;
+const uniqueNIDList = nidList.reduce((prev,cur) => {    
+    const isExist = prev.filter(p => +p.nid === +cur.nid);
+    if (isExist.length === 0 )  {
+        prev.push(cur);
+    }
+    return prev;
 }, []);
 
-console.log('uniqueItems=>', uniqueItems);
+console.log(`uniqueNIDList: ${JSON.stringify(uniqueNIDList)}`)
 
 
 
